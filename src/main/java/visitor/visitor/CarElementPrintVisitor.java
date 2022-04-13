@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import visitor.element.Body;
+import visitor.element.Breaks;
 import visitor.element.Engine;
 import visitor.element.Shield;
 
@@ -26,6 +27,12 @@ public class CarElementPrintVisitor implements CarElementVisitor {
     public void visit(Engine engine) {
         System.out.println(engine.name());
         elementNames.add(engine.name());
+    }
+
+    @Override
+    public void visit(Breaks breaks) {
+        System.out.println(breaks.name());
+        elementNames.add(breaks.name());
     }
 
     public List<String> getElementNames() {
