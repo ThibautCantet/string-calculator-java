@@ -1,5 +1,7 @@
 package visitor.visitor;
 
+import java.util.List;
+
 import visitor.element.Body;
 import visitor.element.Breaks;
 import visitor.element.Engine;
@@ -10,4 +12,6 @@ public interface CarElementVisitor {
     void visit(Shield shield);
     void visit(Engine engine);
     void visit(Breaks breaks);
+
+    List<String> getElementNames();
 }

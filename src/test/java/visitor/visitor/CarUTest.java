@@ -22,7 +22,7 @@ class CarUTest {
 
         car.build(visitor);
 
-        assertThat(visitor.getElementNames()).containsExactlyInAnyOrder("shield", "body", "engine");
+        assertThat(car.getElementNames()).containsExactlyInAnyOrder("shield", "body", "engine");
     }
 
     @Test
@@ -33,6 +33,6 @@ class CarUTest {
 
         car.build(visitor);
 
-        assertThat(visitor.getElementNames()).containsExactlyInAnyOrder("shield", "body", "engine", "breaks");
+        assertThat(car.getElementNames()).containsExactlyInAnyOrder("shield", "body", "engine", "breaks");
     }
 }
